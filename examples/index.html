@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exemplify.js &mdash Examples</title>
+  </head>
+  <body>
+
+    <article class="exemplify">
+      <h1>Basic example, just some HTML</h1>
+
+      <section class="example">
+        <p>This is a <button type="button">button</button></p>
+      </section>
+    </article>
+
+    <article id="example2" class="exemplify">
+      <h1>Some HTML and some CSS</h1>
+
+
+<style>
+  #example2 button {
+    background-color: red;
+    border: 0 none;
+  }
+</style>
+      <section class="example">
+<p>This is a colored <button type="button">button</button></p>
+      </section>
+    </article>
+
+    <article id="example3" class="exemplify">
+      <h1>Some HTML and some CSS and some JS</h1>
+
+
+<style>
+  #example3 button {
+    background-color: blue;
+    color: white;
+    border: 0 none;
+  }
+</style>
+      <section class="example">
+<p>This is a colored <button id="example3_button" type="button">button</button></p>
+<script>
+  document.getElementById('example3_button').onclick = function() {
+    alert('Hello!');
+  };
+</script>
+      </section>
+    </article>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../exemplify.js"></script>
+    <script>
+      exemplify.init();
+    </script>
+  </body>
+</html>
