@@ -5,9 +5,9 @@ libraries or tools that you wish to show off.  It tries to help you avoid code
 duplication by taking the source code of the working demo that you have and
 displaying the HTML, JavaScript, and CSS to the user.
 
-Imagine you have written an awesome jQuery plugin that does x and is called
-`something`.  On your examples page, you could have an example of how to use
-`something`'s most basic features.
+Imagine you have written an awesome jQuery plugin that does `something` and is
+called `awesome`.  On your examples page, you could have an example of how to
+use `awesome`'s most basic features.
 
 If you wrote your HTML something like the following with a container element and
 an example element inside of it,
