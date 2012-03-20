@@ -32,14 +32,18 @@
       // you can't extract the source out of an external script, so just treat
       // it like HTML
       , $scripts = $('script:not([src])', $example).remove()
-      // you cannot remove CSS, it will undo those styles
-      , $styles  = $('style', container)
+
+      // we remove the CSS so that it doesn't show up in the HTML
+      , $styles  = $('style', $example).remove()
 
       , html     = $example.html()
       
       // just use the same type of element that the example was
       , $source  = $(document.createElement(example.tagName))
       ;
+
+    // we need to put the CSS back in because otherwise it won't be applied.
+    $example.append($styles);
 
     if ( html ) {
       $source
