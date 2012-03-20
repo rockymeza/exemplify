@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exemplify.js &mdash Syntax Highlighting Example</title>
+  </head>
+  <body>
+
+    <article class="exemplify">
+      <h1>Syntax Highlighting Example</h1>
+
+      <section class="example">
+<p>This is some HTML.</p>
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/zenburn.min.css">
+
+<script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../exemplify.js"></script>
+<script>
+exemplify.wrapCode = function(code, css_class) {
+  var $code = $('<code />')
+    .addClass(css_class)
+    .text(code.trim());
+
+  return $('<pre />').html($code);
+};
+
+$('.exemplify').exemplify();
+hljs.initHighlighting();
+</script>
+      </section>
+    </article>
+  </body>
+</html>
