@@ -4,10 +4,10 @@
 // The purpose of this tool is to make writing examples easy and to avoid code
 // duplication.
 //
-// The easiest way to use Exemplify is to run `exemplify.init();` at the bottom
-// of your page.  This will look for all containers with the class `exemplify`.
-// It will display the source code in each container if it contains an element
-// with the class `example`.
+// The easiest way to use Exemplify is to run `$('.exemplify').exemplify();` at
+// the bottom of your page.  This will look for all containers with the class
+// `exemplify`.  It will display the source code in each container if it
+// contains an element with the class `example`.
 //
 // Exemplify depends on jQuery.
 ;(function(exports, $){
@@ -72,14 +72,6 @@
     return $('<pre />')
       .addClass(css_class)
       .text(code.trim());
-  };
-
-  // `init` will `exemplify` any element matching the selector.  A selector can
-  // be any jQuery-able object.  If no selector is provided, it will default to
-  // the string `.exemplify`.
-  ex.init = function(selector) {
-    selector || (selector = '.exemplify');
-    $(selector).exemplify();
   };
 
   // Here is the jQuery plugin.  You do not have to use this.

@@ -29,7 +29,7 @@ an example element inside of it,
 and then you run the following JavaScript:
 
 ```javascript
-exemplify.init();
+$('.exemplify').exemplify();
 ```
 
 Exemplify will turn it into something like this:
@@ -63,21 +63,15 @@ Exemplify will turn it into something like this:
 Exemplify depends on jQuery for DOM manipulation.  It exposes a couple of
 functions:
 
-`exemplify.init([selector])`
-:   This is the most basic way to use Exemplify.  It will *exemplify* all
-    containers matching the `exemplify` class.  You may optionally tell `init`
-    to *exemplify* other containers by giving it any jQuery-able object (i.e. a
-    selector or an HTML element).
+`$.fn.exemplify()`
+:   Exemplify provides a jQuery plugin.  It is used internally, but I am still
+    unsure of the preferred invocation method, so it is made available.  You do
+    not have to use it.
 
 `exemplify.exemplify(container)`
 :   This is the actual function that takes a container, extracts the source code
     from it, and displays the source code.  If you only wish to *exemplify* one
     object, this is a method you could use.
-
-`$.fn.exemplify()`
-:   Exemplify provides a jQuery plugin.  It is used internally, but I am still
-    unsure of the preferred invocation method, so it is made available.  You do
-    not have to use it.
 
 `exemplify.wrapCode(code, [css_class])`
 :   This function is made available in case you need to override how the source
@@ -91,6 +85,4 @@ Please feel free to fork and add features/fix some bugs.
 ## TODO
 - Allow customization of the labels (HTML, JS, ...).
 - Unify the JavaScript and CSS wrapping code, it is not very DRY.
-- Determine if the `exemplify.init` function is even useful, or if Exemplify
-  should just be a jQuery plugin.
 - Test in other browsers
