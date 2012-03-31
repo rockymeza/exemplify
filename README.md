@@ -64,9 +64,7 @@ Exemplify depends on jQuery for DOM manipulation.  It exposes a couple of
 functions:
 
 `$.fn.exemplify()`
-:   Exemplify provides a jQuery plugin.  It is used internally, but I am still
-    unsure of the preferred invocation method, so it is made available.  You do
-    not have to use it.
+:   Exemplify provides a jQuery plugin.
 
 `exemplify.exemplify(container)`
 :   This is the actual function that takes a container, extracts the source code
