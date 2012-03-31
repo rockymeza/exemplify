@@ -82,7 +82,7 @@
 
   // Here is the jQuery plugin.  You do not have to use this.
   $.fn.exemplify = function() {
-    this.each(_glue);
+    return this.each(_glue);
   };
 
 })(this, jQuery);
