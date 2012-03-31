@@ -73,9 +73,11 @@
   // default behavior is to wrap the code in a `pre` tag that optionally has a
   // class on it.
   ex.wrapCode = function(code, css_class) {
-    return $('<pre />')
-      .addClass(css_class)
-      .text(code.trim());
+    return $(document.createElement('pre')).append(
+        $(document.createElement('code'))
+          .addClass(css_class)
+          .text(code.trim())
+      );
   };
 
   // Here is the jQuery plugin.  You do not have to use this.

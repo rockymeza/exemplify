@@ -17,14 +17,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="../exemplify.js"></script>
 <script>
-exemplify.wrapCode = function(code, css_class) {
-  var $code = $('<code />')
-    .addClass(css_class)
-    .text(code.trim());
-
-  return $('<pre />').html($code);
-};
-
 $('.exemplify').exemplify();
 hljs.initHighlighting();
 </script>

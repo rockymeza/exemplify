@@ -52,9 +52,9 @@ Exemplify will turn it into something like this:
     </pre>
     
     <h2>JavaScript:</h2>
-    <pre>
+    <pre><code>
       $('.my_p').awesome();
-    </pre>
+    </code></pre>
   </div>
 </article>
 ```
